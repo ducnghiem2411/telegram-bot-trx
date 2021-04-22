@@ -2,6 +2,9 @@ import { config } from "dotenv";
 
 config()
 
+if(!process.env.PORT) throw new Error('PORT must be provided')
+export const PORT = process.env.PORT
+
 export const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || ''
 
 if(!process.env.KAFKA_BROKER) throw new Error('KAFKA_BROKER must be provided')

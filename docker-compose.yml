@@ -7,6 +7,6 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "$GRAPHQL_PORT:$GRAPHQL_PORT"
+      - "$PORT:$PORT"
     env_file: .env
     restart: always

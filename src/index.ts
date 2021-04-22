@@ -1,13 +1,13 @@
 import './tronweb'
 import {} from 'telegraf'
 import express from 'express'
+import { PORT } from './config'
 import { initTelegraf, TeleBot } from './telebot'
 import { connectMongo, Addresses, RawAddresses } from './mongodb'
 import { connectBrickConsumer } from './kafka'
 import { Address } from './models'
 
 const app = express()
-const PORT = 8000
 
 export let CacheAddresses: Array<Address> = []
 export let CacheRawAddresses: Array<string> = []
