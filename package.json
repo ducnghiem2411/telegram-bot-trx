@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node ./src/index.ts",
-    "dev:watch": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts"
+    "dev:watch": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
+    "dep": "docker-compose -f docker-compose.yml up --build -d",
+    "dep:log": "docker-compose -f docker-compose.yml up --build"
   },
   "keywords": [],
   "author": "",

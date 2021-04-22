@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  chat-bot-trx:
+    container_name: chat-bot-trx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "$GRAPHQL_PORT:$GRAPHQL_PORT"
+    env_file: .env
+    restart: always
