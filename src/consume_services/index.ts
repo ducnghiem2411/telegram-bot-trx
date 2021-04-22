@@ -27,7 +27,7 @@ export async function resolveMessage(topic, value: TransactionMessage) {
                                     if(userAddress.follow) {
                                         TeleBot.telegram.sendMessage(userAddress.chatId, sentMessage(value.fromAddress, value.assetAmount, value.toAddress))
                                     }
-                                    if(userAddress.less && userAddress.less < CacheAddresses[addressIndex].balance) {
+                                    if(userAddress.less && userAddress.less > CacheAddresses[addressIndex].balance) {
                                         TeleBot.telegram.sendMessage(userAddress.chatId, `Balance of address ${value.fromAddress} went below ${(userAddress.less)/10**6} trx`)
                                     }
                                 }
